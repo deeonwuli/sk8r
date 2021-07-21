@@ -10,6 +10,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-text-reveal": "^1.1.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -39,6 +40,7 @@
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4",
+    "tailwindcss-text-fill-stroke": "^1.1.2"
   }
 }

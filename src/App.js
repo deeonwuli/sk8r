@@ -1,27 +1,13 @@
-import './styles/index.css';
+import Header from "./components/Header"
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="text-center">
-      <header className="bg-red-900 h-screen flex flex-col justify-center items-center text-xl text-white">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="text-blue-300"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
-      <footer>
-
-      </footer>
+    <div className="h-screen overflow-hidden">
+      <Header />
+      <Footer />
     </div>
-  );
+  )
 }
 
 export default App;
