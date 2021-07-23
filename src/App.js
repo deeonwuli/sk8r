@@ -1,12 +1,21 @@
-import Header from "./components/Header"
-import Footer from "./components/Footer";
+import Header from "./pages/Home"
+import Play from "./pages/Play"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 function App() {
   return (
-    <div className="h-screen overflow-hidden">
-      <Header />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="h-screen overflow-hidden">
+        <Switch>
+          <Route exact path="/">
+            <Header />
+          </Route>
+          <Route path="/play">
+            <Play />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   )
 }
 
