@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 function App() {
   return (
     <BrowserRouter>
-      <div className="h-screen overflow-hidden">
+      <div className="h-screen">
         <Switch>
           <Route exact path="/">
             <Header />
