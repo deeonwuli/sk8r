@@ -1,4 +1,4 @@
-import Header from "./pages/Home"
+import MyHome from "./pages/Home"
 import Play from "./pages/Play"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 
@@ -8,7 +8,7 @@ function App() {
       <div className="h-screen">
         <Switch>
           <Route exact path="/">
-            <Header />
+            <MyHome />
           </Route>
           <Route path="/play">
             <Play />
