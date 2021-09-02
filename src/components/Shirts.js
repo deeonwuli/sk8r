@@ -56,7 +56,7 @@ export default function Shirts() {
                     </div>
                 ))}
             </div>
-            <div className="absolute bottom-96 right-">
+            <div className="absolute bottom-96 top-52">
                 { show ? (
                     <div className="h-16 w-16 p-5" style={{ backgroundColor: `${shirtColor}` }}></div> 
                 ) : (
