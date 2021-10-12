@@ -1,7 +1,7 @@
 import Footer from '../components/Footer'
 import body from '../images/body.png'
-import Shirts from '../components/Shirts'
 import { Link } from 'react-router-dom'
+import AssetSelector from '../components/AssetSelector'
 
 export default function Play () {
     return (
@@ -14,7 +14,7 @@ export default function Play () {
                         </svg>
                     </Link>
                     <img src={body} alt="girl" className="h-72" />
-                    <Shirts />
+                    <AssetSelector />
                 </div> 
             </div>
             <Footer />

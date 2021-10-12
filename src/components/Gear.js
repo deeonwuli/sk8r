@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-export default function Shirts() {
+export default function Gears() {
   const [show, setShow] = useState(false);
-  const [shirtColor, setColor] = useState("");
+  const [gearColor, setColor] = useState("");
   const [lastButtonId, setLastButtonId] = useState(undefined);
 
   const showBox = (buttonId) => {
@@ -18,48 +18,48 @@ export default function Shirts() {
     setLastButtonId(buttonId);
   };
 
-  const shirts = [
+  const gears = [
     {
       id: 0,
-      name: "red",
-      colour: "#ff0000",
+      name: "green",
+      colour: "#CAFF8A",
     },
     {
       id: 1,
-      name: "pink",
-      colour: "#ffd1df",
-    },
-    {
-      id: 2,
       name: "blue",
       colour: "#4B4ED0",
     },
     {
-      id: 3,
+      id: 2,
       name: "yellow",
       colour: "#FDE74C",
     },
     {
+      id: 3,
+      name: "pink",
+      colour: "#ffd1df",
+    },
+    {
       id: 4,
-      name: "green",
-      colour: "#CAFF8A",
+      name: "red",
+      colour: "#ff0000",
     },
   ];
 
   return (
     <>
       <div className="relative flex flex-row p-10 bg-gray-400 rounded-full w-full md:w-min overflow-scroll">
-        {shirts.map((shirt) => (
-          <div key={shirt.id}>
+        {gears.map((gear) => (
+          <div key={gear.id}>
             <button
               className="mx-5 px-5 text-black"
-              style={{ backgroundColor: shirt.colour }}
+              style={{ backgroundColor: gear.colour }}
               onClick={() => {
-                showBox(shirt.id);
-                setColor(shirt.colour);
+                showBox(gear.id);
+                setColor(gear.colour);
               }}
             >
-              {shirt.name}
+              {gear.name}
             </button>
           </div>
         ))}
@@ -68,7 +68,7 @@ export default function Shirts() {
         {show ? (
           <div
             className="h-16 w-16 p-5"
-            style={{ backgroundColor: `${shirtColor}` }}
+            style={{ backgroundColor: `${gearColor}` }}
           ></div>
         ) : null}
       </div>

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-export default function Shirts() {
+export default function Shoes() {
   const [show, setShow] = useState(false);
-  const [shirtColor, setColor] = useState("");
+  const [shoeColor, setColor] = useState("");
   const [lastButtonId, setLastButtonId] = useState(undefined);
 
   const showBox = (buttonId) => {
@@ -18,7 +18,7 @@ export default function Shirts() {
     setLastButtonId(buttonId);
   };
 
-  const shirts = [
+  const shoes = [
     {
       id: 0,
       name: "red",
@@ -31,8 +31,8 @@ export default function Shirts() {
     },
     {
       id: 2,
-      name: "blue",
-      colour: "#4B4ED0",
+      name: "green",
+      colour: "#CAFF8A",
     },
     {
       id: 3,
@@ -41,34 +41,34 @@ export default function Shirts() {
     },
     {
       id: 4,
-      name: "green",
-      colour: "#CAFF8A",
+      name: "blue",
+      colour: "#4B4ED0",
     },
   ];
 
   return (
     <>
       <div className="relative flex flex-row p-10 bg-gray-400 rounded-full w-full md:w-min overflow-scroll">
-        {shirts.map((shirt) => (
-          <div key={shirt.id}>
+        {shoes.map((shoe) => (
+          <div key={shoe.id}>
             <button
               className="mx-5 px-5 text-black"
-              style={{ backgroundColor: shirt.colour }}
+              style={{ backgroundColor: shoe.colour }}
               onClick={() => {
-                showBox(shirt.id);
-                setColor(shirt.colour);
+                showBox(shoe.id);
+                setColor(shoe.colour);
               }}
             >
-              {shirt.name}
+              {shoe.name}
             </button>
           </div>
         ))}
       </div>
-      <div className="absolute top-52">
+      <div className="absolute bottom-96 top-52">
         {show ? (
           <div
             className="h-16 w-16 p-5"
-            style={{ backgroundColor: `${shirtColor}` }}
+            style={{ backgroundColor: `${shoeColor}` }}
           ></div>
         ) : null}
       </div>
