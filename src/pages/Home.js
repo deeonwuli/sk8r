@@ -1,5 +1,4 @@
 import { useState } from "react";
-import girl from "../images/girl.png";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -43,7 +42,7 @@ export default function MyHome() {
               </button>
             </Link>
           </div>
-          <img src={girl} alt="skating-girl" className="-ml-28 lg:-ml-0 z-20" />
+          <img src="/images/girl.png" alt="skating-girl" className="-ml-28 lg:-ml-0 z-20" />
           <div className="flex flex-col justify-between items-center -ml-28 lg:-ml-48 z-30">
             <p className="text-stroke-2 lg:text-stroke-4 text-stroke-black text-5xl lg:text-9xl">
               Girl

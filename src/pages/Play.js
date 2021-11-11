@@ -26,7 +26,7 @@ export default function Play() {
   const Shirt = () => {
     return (
       <div
-        className="h-40 w-40 p-5 z-20 absolute"
+        className="h-20 w-20 p-5 z-20 absolute bg-red-400"
         style={{ backgroundColor: "red" }}
       ></div>
     );
@@ -35,7 +35,7 @@ export default function Play() {
   const Shoes = () => {
     return (
       <div
-        className="h-40 w-40 p-5 z-20 absolute"
+        className="h-20 w-20 p-5 z-20 absolute"
         style={{ backgroundColor: "yellow", top: "85%" }}
       ></div>
     );
@@ -44,7 +44,7 @@ export default function Play() {
   const Bottoms = () => {
     return (
       <div
-        className="h-40 w-40 p-5 z-20 absolute"
+        className="h-20 w-20 p-5 z-20 absolute"
         style={{ backgroundColor: "green", top: "60%" }}
       ></div>
     );
@@ -53,7 +53,7 @@ export default function Play() {
   const Gear = () => {
     return (
       <div
-        className="h-40 w-40 p-5 z-20 absolute top-12"
+        className="h-20 w-20 p-5 z-20 absolute"
         style={{ backgroundColor: "blue", bottom: "70%" }}
       ></div>
     );

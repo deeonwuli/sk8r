@@ -17,7 +17,7 @@ body {
 }
 
 .wave {
-  background: url(../images/wave.svg) repeat-x;
+  background: url(../assets/wave.svg) repeat-x;
   background-blend-mode: multiply;
   position: absolute;
   top: -198px;
