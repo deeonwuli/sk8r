@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ReactComponent as Left } from "../assets/left.svg";
+import { ReactComponent as Right } from "../assets/right.svg";
 import Footer from "../components/Footer";
 
 export default function Play() {
@@ -71,18 +73,53 @@ export default function Play() {
             columnGap: "20rem",
           }}
         >
-          <button className="bg-white p-5 rounded-full" onClick={toggleShirt}>
-            shirt
-          </button>
-          <button className="bg-white p-5 rounded-full" onClick={toggleBottoms}>
-            bottoms
-          </button>
-          <button className="bg-white p-5 rounded-full" onClick={toggleShoes}>
-            shoes
-          </button>
-          <button className="bg-white p-5 rounded-full" onClick={toggleGear}>
-            gear
-          </button>
+          <div className="flex items-center">
+            <button>
+              <Left />
+            </button>
+            <button className="bg-white p-5 rounded-full" onClick={toggleShirt}>
+              shirt
+            </button>
+            <button>
+              <Right />
+            </button>
+          </div>
+          <div className="flex items-center">
+            <button>
+              <Left />
+            </button>
+            <button
+              className="bg-white p-5 rounded-full"
+              onClick={toggleBottoms}
+            >
+              bottoms
+            </button>
+            <button>
+              <Right />
+            </button>
+          </div>
+          <div className="flex items-center">
+            <button>
+              <Left />
+            </button>
+            <button className="bg-white p-5 rounded-full" onClick={toggleShoes}>
+              shoes
+            </button>
+            <button>
+              <Right />
+            </button>
+          </div>
+          <div className="flex items-center">
+            <button>
+              <Left />
+            </button>
+            <button className="bg-white p-5 rounded-full" onClick={toggleGear}>
+              gear
+            </button>
+            <button>
+              <Right />
+            </button>
+          </div>
         </div>
         <img
           src="/images/body.png"
