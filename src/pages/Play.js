@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { ReactComponent as Left } from "../assets/left.svg";
 import { ReactComponent as Right } from "../assets/right.svg";
+import { Shirt1, Shirt2, Shirt3 } from "../components/Shirts";
+import { Bottoms1, Bottoms2, Bottoms3 } from "../components/Bottoms";
+import { Gear1, Gear2, Gear3 } from "../components/Gear";
+import { Shoes1, Shoes2, Shoes3 } from "../components/Shoes";
 import Footer from "../components/Footer";
 
 export default function Play() {
@@ -8,6 +12,10 @@ export default function Play() {
   const [bottoms, setBottoms] = useState(false);
   const [gear, setGear] = useState(false);
   const [shoes, setShoes] = useState(false);
+  const [countShirt, setCountShirt] = useState(1);
+  const [countBottoms, setCountBottoms] = useState(1);
+  const [countGear, setCountGear] = useState(1);
+  const [countShoes, setCountShoes] = useState(1);
 
   const toggleShirt = () => {
     setShirt(!shirt);
@@ -25,40 +33,76 @@ export default function Play() {
     setShoes(!shoes);
   };
 
+  const prevShirt = () => {
+    setCountShirt(countShirt - 1);
+  };
+
+  const nextShirt = () => {
+    setCountShirt(countShirt + 1);
+  };
+
+  const prevShoes = () => {
+    setCountShoes(countShoes - 1);
+  };
+
+  const nextShoes = () => {
+    setCountShoes(countShoes + 1);
+  };
+
+  const prevBottoms = () => {
+    setCountBottoms(countBottoms - 1);
+  };
+
+  const nextBottoms = () => {
+    setCountBottoms(countBottoms + 1);
+  };
+
+  const prevGear = () => {
+    setCountGear(countGear - 1);
+  };
+
+  const nextGear = () => {
+    setCountGear(countGear + 1);
+  };
+
   const Shirt = () => {
-    return (
-      <div
-        className="h-20 w-20 p-5 z-20 absolute bg-red-400"
-        style={{ backgroundColor: "red" }}
-      ></div>
-    );
+    if (countShirt === 1) {
+      return <Shirt1 />;
+    } else if (countShirt % 2 === 0) {
+      return <Shirt2 />;
+    } else if (countShirt === 3) {
+      return <Shirt3 />;
+    }
   };
 
   const Shoes = () => {
-    return (
-      <div
-        className="h-20 w-20 p-5 z-20 absolute"
-        style={{ backgroundColor: "yellow", top: "85%" }}
-      ></div>
-    );
+    if (countShoes === 1) {
+      return <Shoes1 />;
+    } else if (countShoes % 2 === 0) {
+      return <Shoes2 />;
+    } else if (countShoes === 3) {
+      return <Shoes3 />;
+    }
   };
 
   const Bottoms = () => {
-    return (
-      <div
-        className="h-20 w-20 p-5 z-20 absolute"
-        style={{ backgroundColor: "green", top: "60%" }}
-      ></div>
-    );
+    if (countBottoms === 1) {
+      return <Bottoms1 />;
+    } else if (countBottoms % 2 === 0) {
+      return <Bottoms2 />;
+    } else if (countBottoms === 3) {
+      return <Bottoms3 />;
+    }
   };
 
   const Gear = () => {
-    return (
-      <div
-        className="h-20 w-20 p-5 z-20 absolute"
-        style={{ backgroundColor: "blue", bottom: "70%" }}
-      ></div>
-    );
+    if (countGear === 1) {
+      return <Gear1 />;
+    } else if (countGear % 2 === 0) {
+      return <Gear2 />;
+    } else if (countGear === 3) {
+      return <Gear3 />;
+    }
   };
 
   return (
@@ -74,18 +118,18 @@ export default function Play() {
           }}
         >
           <div className="flex items-center">
-            <button>
+            <button onClick={prevShirt}>
               <Left />
             </button>
             <button className="bg-white p-5 rounded-full" onClick={toggleShirt}>
               shirt
             </button>
-            <button>
+            <button onClick={nextShirt}>
               <Right />
             </button>
           </div>
           <div className="flex items-center">
-            <button>
+            <button onClick={prevBottoms}>
               <Left />
             </button>
             <button
@@ -94,29 +138,29 @@ export default function Play() {
             >
               bottoms
             </button>
-            <button>
+            <button onClick={nextBottoms}>
               <Right />
             </button>
           </div>
           <div className="flex items-center">
-            <button>
+            <button onClick={prevShoes}>
               <Left />
             </button>
             <button className="bg-white p-5 rounded-full" onClick={toggleShoes}>
               shoes
             </button>
-            <button>
+            <button onClick={nextShoes}>
               <Right />
             </button>
           </div>
           <div className="flex items-center">
-            <button>
+            <button onClick={prevGear}>
               <Left />
             </button>
             <button className="bg-white p-5 rounded-full" onClick={toggleGear}>
               gear
             </button>
-            <button>
+            <button onClick={nextGear}>
               <Right />
             </button>
           </div>
