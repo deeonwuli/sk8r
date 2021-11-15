@@ -12,10 +12,11 @@ export default function Play() {
   const [bottoms, setBottoms] = useState(false);
   const [gear, setGear] = useState(false);
   const [shoes, setShoes] = useState(false);
-  const [countShirt, setCountShirt] = useState(1);
-  const [countBottoms, setCountBottoms] = useState(1);
-  const [countGear, setCountGear] = useState(1);
-  const [countShoes, setCountShoes] = useState(1);
+
+  const [countShirt, setCountShirt] = useState(0);
+  const [countBottoms, setCountBottoms] = useState(0);
+  const [countGear, setCountGear] = useState(0);
+  const [countShoes, setCountShoes] = useState(0);
 
   const toggleShirt = () => {
     setShirt(!shirt);
@@ -43,6 +44,7 @@ export default function Play() {
 
   const prevShoes = () => {
     setCountShoes(countShoes - 1);
+    console.log(countShoes)
   };
 
   const nextShoes = () => {
@@ -66,41 +68,41 @@ export default function Play() {
   };
 
   const Shirt = () => {
-    if (countShirt === 1) {
+    if (countShirt % 3 === 0) {
       return <Shirt1 />;
-    } else if (countShirt % 2 === 0) {
+    } else if (countShirt % 3 === 1 || countShirt % 3 === -2) {
       return <Shirt2 />;
-    } else if (countShirt === 3) {
+    } else if (countShirt % 3 === 2 || countShirt % 3 === -1) {
       return <Shirt3 />;
     }
   };
 
   const Shoes = () => {
-    if (countShoes === 1) {
+    if (countShoes % 3 === 0) {
       return <Shoes1 />;
-    } else if (countShoes % 2 === 0) {
+    } else if (countShoes % 3 === 1 || countShoes % 3 === -2) {
       return <Shoes2 />;
-    } else if (countShoes === 3) {
+    } else if (countShoes % 3 === 2 || countShoes % 3 === -1) {
       return <Shoes3 />;
     }
   };
 
   const Bottoms = () => {
-    if (countBottoms === 1) {
+    if (countBottoms % 3 === 0) {
       return <Bottoms1 />;
-    } else if (countBottoms % 2 === 0) {
+    } else if (countBottoms % 3 === 1 || countBottoms % 3 === -2) {
       return <Bottoms2 />;
-    } else if (countBottoms === 3) {
+    } else if (countBottoms % 3 === 2 || countBottoms % 3 === -1) {
       return <Bottoms3 />;
     }
   };
 
   const Gear = () => {
-    if (countGear === 1) {
+    if (countGear % 3 === 0) {
       return <Gear1 />;
-    } else if (countGear % 2 === 0) {
+    } else if (countGear % 3 === 1 || countGear % 3 === -2) {
       return <Gear2 />;
-    } else if (countGear === 3) {
+    } else if (countGear % 3 === 2 || countGear % 3 === -1) {
       return <Gear3 />;
     }
   };
