@@ -116,7 +116,7 @@ export default function Play() {
             display: "grid",
             gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
             rowGap: "10rem",
-            columnGap: "20rem",
+            columnGap: "6.5rem",
           }}
         >
           <div className="flex items-center">
